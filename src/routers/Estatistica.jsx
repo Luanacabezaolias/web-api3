@@ -1,5 +1,6 @@
 import {} from 'react'
-import { VictoryBar, VictoryChart, VictoryAxis } from 'victory'
+import { VictoryBar, VictoryChart, VictoryAxis, VictoryTheme } from 'victory'
+import { EstatDiv } from '../css/estilo'
 
 function Estatistica(){
 
@@ -11,8 +12,11 @@ function Estatistica(){
     ]
 
     return(
-        <div>
+
+        <EstatDiv>
+        <div className='estatistica'>
             <VictoryChart
+            theme={VictoryTheme.material}
 
             //padding
             domainPadding={30}
@@ -36,6 +40,7 @@ function Estatistica(){
 
             </VictoryChart>
         </div>
+        </EstatDiv>
     )
 }
 export default Estatistica
